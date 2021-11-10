@@ -1,0 +1,31 @@
+.keep-app{
+font-family: cursive;
+}
+
+.keep-app button{
+    font-family: cursive;
+    background-color: rgb(230, 177, 32); 
+    border-radius:5px;
+    font-weight: bold;
+}
+
+.notes-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 2px 3px 3px black;
+}
+
+.note-preview{
+    box-shadow: 2px 3px 3px black;
+    padding: 10px; 
+    margin: 10px;
+    border-radius:5px; 
+}
+
+.note-preview img {
+    width: 95%;
+    max-width: 200px;
+}
+

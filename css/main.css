@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Zeyada&display=swap');
+
 *{
     box-sizing: border-box;    
 }
 
 .home-page{
     height: 90vh;
+}
+
+.logo h3{
+    font-family: 'Zeyada', cursive;
+    text-shadow: 2px 2px 2px whitesmoke;
+    font-size: xx-large;
 }
 
 .app-header{
@@ -23,19 +31,11 @@
     text-align: end;    
 }
 
-.app-header h3{
-    font-size: xx-large;
-    text-shadow: 2px 2px 2px whitesmoke;
-
-}
-
 .app-footer {
-    margin-top: 20px;
-    padding: 10px;
     background-color:  rgba(255, 0, 0, 0.589);
-    font-family: fantasy;
-    text-shadow: 2px 2px 2px whitesmoke;
-
+    font-family: 'Zeyada', cursive;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .home-page{
@@ -43,173 +43,40 @@
 }
 
 .home-page img{
- width: 90%;
+ width: 250px;
+ height: 180px;
+ box-shadow: 5px 5px 5px 5px rgba(175, 49, 49, 0.568);
+ margin-left: 100px;
+ margin-right: 100px;
+ border-radius: 20px;
 }
+
+.books-img{
+    transform: rotate(-30deg);
+}
+
+.mail-img{
+    transform: rotate(40deg);
+}
+
+.keep-img{
+    transform: rotate(-10deg);
+}
+
 
 .about-page{
     height: 90vh;
 }
 
 body{
-    background-color: rgb(170, 163, 163);
+    background-color: rgba(170, 163, 163, 0.61);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-
 }
 
-.book-filter{
-    padding: 20px;
-    background-color: rgb(170, 163, 163);
-}
-
-.book-list {
-    margin: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    font-family: fantasy;
-
-}
-
-img {
-    width: 100px;
-}
-
-.book-preview-container {
-    font-size: 20px;
-    padding: 10px;
-    border: 1px solid black;
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    background-color: whitesmoke;
-    box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.589);
-    width: 200px;
-}
-
-.book-details{
-    padding: 20px;
-    background-color: whitesmoke;
-    text-align: center;
-    border: solid black;
-    width: 50%;
-    margin: auto;
-}
-
-.book-review{
-    box-shadow: 1px 2px 2px 2px;
-    min-idth: 300px;
-    text-align: center;
-    margin: auto; 
-    padding: 5px;
-}
-
-.reader{
-   height: 20px;
-}
-
-.review{
-    height: 60px;
-    margin-bottom: 10px;
-}
-
-.book-review input{
-width: 40px;
-}
-
-.reviews-list{
-    list-style: none;
-    padding: 5px;
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;    
-    box-shadow: 1px 2px 2px 2px;
-    margin-bottom: 3px;background-color: rgba(128, 128, 128, 0.096);
-    min-width: 300px;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 20px;
-}
-
-.x{
-    font-size: 10px;
-    padding: 3px;
-    box-shadow: 1px 1px 1px rgb(5, 5, 5);
-    background-color: grey;
-    margin: 3px;
-    text-decoration: none;
-    color: black;
-}
-
-button{
-    background-color: rgb(114, 111, 111);
-}
-
-.book-title{
-    font-variant-caps: all-small-caps;
-    font-size: 20px;
-
-}
-
-.red {
-    color: red;
-}
-
-.green{
-    color: green;
-}
-
-.sale{
-    font-weight: bold;
-    background-color: yellow;
-    width: fit-content;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 10px;
-}
-
-.read{
-    box-shadow: 1px 2px 2px 2px black;
-    font-size: 8px;
-}
-
-.shown{
-    display: block;
-    margin: auto;
-}
-
-.hidden{
-    display: none;
-}
-
-.user-msg{
-    background-color:black;
-    width: 20%;
-    margin: auto;
-    font-variant-caps: all-small-caps;
-    font-weight: bold;
-    color: yellow;
-}
-
-.checked {
-    color: orange;
-  }
-
-header a, .actions a {
-    color: black;    
-}
-
-.search-result{
-    padding: 2px;
-    list-style: none;
-}
-
-/* mail */
-.mail-img{
-width: 50%;
+.home-page h3{
+    font-family: 'Zeyada', cursive;
+    font-size: 100px;
+    text-shadow: 5px 5px 5px rgba(209, 172, 51, 0.788);
 }
