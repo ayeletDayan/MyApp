@@ -5,7 +5,7 @@ _createBooks()
 
 export const bookService = {
   query,
-  remove,
+  // remove,
   getById,
   put,
   searchBook,
@@ -467,13 +467,11 @@ function _createBooks() {
   }
 }
 
-function remove(bookId) {
-  const idx = this.gBooks.findIndex(book => book.id === bookId);
-  this.gBooks.splice(idx, 1);
-  utilService.saveToStorage(BOOKS_KEY, this.gBooks);
-}
-
-
+// function remove(bookId) {
+//   const idx = this.gBooks.findIndex(book => book.id === bookId);
+//   this.gBooks.splice(idx, 1);
+//   utilService.saveToStorage(BOOKS_KEY, this.gBooks);
+// }
 
 function getById(bookId) {
   return utilService.get(BOOKS_KEY, bookId);

@@ -4,7 +4,8 @@ export const utilService = {
     query,
     get,
     put,
-    post
+    post,
+    remove
 }
 
 function saveToStorage(key, value) {
@@ -57,4 +58,13 @@ function put(entityType, updatedEntity) {
 
 function _save(entityType, entities) {
     localStorage.setItem(entityType, JSON.stringify(entities))
+}
+
+function remove(entityType, entityId) {
+    return query(entityType)
+        .then(entities => {
+            const idx = entities.findIndex(entity => entity.id === entityId);
+            entities.splice(idx, 1)
+            _save(entityType, entities)
+        })
 }

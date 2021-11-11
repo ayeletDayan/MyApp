@@ -14,7 +14,7 @@ font-family: cursive;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 2px 3px 3px black;
+
 }
 
 .note-preview{

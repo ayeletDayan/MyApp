@@ -13,7 +13,6 @@ export default {
     <notes-list class="notes-list" v-if="isShown" :notes="notesToShow" />
     <br>
     </section>
-
     `,
     data() {
         return {
@@ -23,9 +22,13 @@ export default {
         };
     },
     created() {
-        // this.loadNotes();
+        this.loadNotes();
     },
     methods: {
+        loadNotes() {
+            noteService.query()
+                .then(notes => this.notes = notes);
+        },
         noteTxt(){
             console.log('txt')
             console.log(this.notes)
@@ -45,9 +48,7 @@ export default {
 
     computed: {
         notesToShow() {
-            console.log(this.notes)
-            return this.notes
-            
+            return this.notes            
         },
 
     },

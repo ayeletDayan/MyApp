@@ -23,7 +23,6 @@ export default {
     `,
     methods: {
         removeNote(id) {
-            console.log(id)
             this.$emit('removeNote', id)
         },
     },
