@@ -4,7 +4,7 @@ font-family: cursive;
 
 .keep-app button{
     font-family: cursive;
-    background-color: rgb(230, 177, 32); 
+    background-color: rgba(170, 163, 163, 0);
     border-radius:5px;
     font-weight: bold;
 }
@@ -21,11 +21,32 @@ font-family: cursive;
     box-shadow: 2px 3px 3px black;
     padding: 10px; 
     margin: 10px;
-    border-radius:5px; 
+    border-radius:5px;
+    display: flex;
+    flex-direction: column; 
 }
 
 .note-preview img {
     width: 95%;
     max-width: 200px;
+}
+
+.edit-btn-container *{
+    flex-direction: row;
+    border: none;
+    font-size: 18px;
+}
+
+.edit-btn:hover{
+  background-color:yellow;
+    
+}
+
+.note-pinned{
+    background-color: pink;
+}
+
+.clr-input{
+    display: none;
 }
 

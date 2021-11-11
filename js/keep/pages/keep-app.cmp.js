@@ -5,12 +5,21 @@ import notesList from '../cmps/notes-list.cmp.js';
 export default {
     template: `
     <section class="keep-app">
-        <button @click="noteTxt">noteTxt</button>
-        <button @click="noteImg">noteImg</button>
-        <button @click="noteYouTube">noteYouTube</button>
-        <button @click="noteToDo">noteToDo</button>
-        <br><br>
-    <notes-list class="notes-list" v-if="isShown" :notes="notesToShow" />
+        <br>
+        <div class="add-note">
+        <button @click="noteTxt">
+        <i class="fa fa-comment" style="font-size:24px"></i>
+        </button>
+        <button @click="noteImg">
+        <i class="fa fa-file-photo-o" style="font-size:24px"></i>
+        </button>
+        <button @click="noteYouTube">
+        <i class="fa fa-youtube-square" style="font-size:24px"></i>
+        </button>
+        <button @click="noteToDo">ToDo</button>  
+        </div>
+        <br>
+        <notes-list class="notes-list" v-if="isShown" :notes="notesToShow" />
     <br>
     </section>
     `,
@@ -54,8 +63,7 @@ export default {
     },
     components: {
         notesList,
-        noteTxt
-        
+        noteTxt        
     },
 };
 
