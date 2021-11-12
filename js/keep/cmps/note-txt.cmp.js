@@ -2,7 +2,9 @@ export default {
     template: `
          <div class="text-box">
              <label>
-                 <input type="text" v-model="txt" @blur="reportVal" />
+                 <br>
+                 <input type="text" v-model="txt"/>
+                 <button @click="reportVal">Add</button>
             </label>
          </div>
     `,
@@ -12,7 +14,7 @@ export default {
         };
     },
     methods: {
-        reportVal() {
+        reportVal() {            
             this.$emit('setInput', this.txt);
         }
     }

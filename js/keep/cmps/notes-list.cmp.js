@@ -19,9 +19,8 @@ export default {
     methods: {
         removeNote(id) {
             const idx = this.notes.findIndex(note => note.id === id)
-            this.notes.splice(idx, 1)            
-            noteService.put(this.notes)
-                .then(notes => this.notes = notes)
+            this.notes.splice(idx, 1)
+            utilService.remove('notes', id)            
                 .then(() => {
                     const msg = {
                         txt: `Note was remove`,
@@ -40,16 +39,16 @@ export default {
         },
         onPin(id) { //todo idx
             const idx = this.notes.findIndex(note => note.id === id)
-            noteService.put(this.notes)
-                .then(notes => this.notes = notes)
+            noteService.put(this.notes[idx])
+                // .then(notes => this.notes = notes)
         },
         onColor(color, id) {
             // console.log(color, id);
             const idx = this.notes.findIndex(note => note.id === id)
             // console.log(idx)
             this.notes[idx].style.backgroundColor = color;
-            noteService.put(this.notes)
-                .then(notes => this.notes = notes)
+            noteService.put(this.notes[idx])
+                // .then(note => this.notes.push(note))
         }
     },
     computed: {

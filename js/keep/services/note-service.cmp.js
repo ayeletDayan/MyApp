@@ -120,28 +120,47 @@ function _creatNotes() {
   }
 }
 
-function put(notes) {
-  return utilService.put(NOTES_KEY, notes)
+function put(note) {
+  return utilService.put(NOTES_KEY, note)
 }
 
-function addNote() {
+function addNote(input, type) {
   const noteToAdd = {
     type: '',
-    isPinned: false,
+    isPinned: false,    
     info: {
-      txt: ''
+      txt: '',
+      todos: [
+      ],
     },
-    label: '',
-    todos: [
-      { txt: '', doneAt: Date.now }     
-    ],
     img: '',
-    title: '',
     url: '',
     style: {
-      backgroundColor: 'none'
+      backgroundColor: 'gold'
     }
   }
-  return utilService.post(NOTES_KEY, noteToAdd)
+  if (type === 'txt') {
+    noteToAdd.type = "note-txt"
+    noteToAdd.info.txt = input
+    }
+  
+  else if (type === 'img') {
+    noteToAdd.type = "note-img"
+    noteToAdd.img = input
+  }
 
+  else if (type === 'video') {
+    noteToAdd.type = "note-video"
+    noteToAdd.url = input
+  }
+
+  else if (type === 'todo') {
+    noteToAdd.type = "note-todos"
+     input.map((todo)=>{     
+      noteToAdd.info.todos.push({txt: todo, doneAt: Date.now()})  
+    }
+    )  
+  }
+  console.log(noteToAdd);
+  return utilService.post(NOTES_KEY, noteToAdd)
 }
