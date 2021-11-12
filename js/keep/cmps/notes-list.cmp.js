@@ -7,31 +7,28 @@ export default {
     props: ['notes'],
     template: `
         <div class="notes-list">
-        <div v-for="note in notes" :key="note.id" class="note-preview-container" >            
+        <div v-for="note in pinedNotes" :key="note.id" class="note-preview-container" >            
+            <note-preview :note="note" @removeNote="removeNote" @onPin="onPin" @onColor="onColor"/>           
+        </div>
+        <div v-for="note in notPinedNotes" :key="note.id" class="note-preview-container" >            
             <note-preview :note="note" @removeNote="removeNote" @onPin="onPin" @onColor="onColor"/>           
         </div>
         </div>        
     `,
-    data() {
-        return {
 
-        }
-    },
-    created() {
-        
-    },
     methods: {
         removeNote(id) {
-            this.notes.splice(id, 1)
+            const idx = this.notes.findIndex(note => note.id === id)
+            this.notes.splice(idx, 1)            
             noteService.put(this.notes)
                 .then(notes => this.notes = notes)
                 .then(() => {
                     const msg = {
-                        txt: `Review was remove`,
+                        txt: `Note was remove`,
                         type: 'success'
                     };
                     eventBus.$emit('showMsg', msg);
-                })
+                })                
                 .catch(err => {
                     console.log('err', err);
                     const msg = {
@@ -39,14 +36,32 @@ export default {
                         type: 'error'
                     };
                     eventBus.$emit('showMsg', msg);
-                });
+                }); 
         },
-        onPin(id) {
+        onPin(id) { //todo idx
+            const idx = this.notes.findIndex(note => note.id === id)
             noteService.put(this.notes)
-            .then(notes => this.notes = notes)
+                .then(notes => this.notes = notes)
         },
-        onColor(color, id){
-            console.log(color, id);
+        onColor(color, id) {
+            // console.log(color, id);
+            const idx = this.notes.findIndex(note => note.id === id)
+            // console.log(idx)
+            this.notes[idx].style.backgroundColor = color;
+            noteService.put(this.notes)
+                .then(notes => this.notes = notes)
+        }
+    },
+    computed: {
+        pinedNotes() {
+            return this.notes.filter((note) => {
+                return note.isPinned
+            })
+        },
+        notPinedNotes() {
+            return this.notes.filter((note) => {
+                return !note.isPinned
+            })
         }
     },
     components: {

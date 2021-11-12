@@ -24,9 +24,9 @@ function _creatNotes() {
         info: {
           txt: "Fullstack Me Baby!"
         },
-        // style: {
-        //   backgroundColor: "#00d"
-        // }
+        style: {
+          backgroundColor: "pink"
+        }
       },
       {
         id: "n102",
@@ -36,9 +36,9 @@ function _creatNotes() {
           img: "img/cats.jpg",
           title: "Bobi and Me"
         },
-        // style: {
-        //   backgroundColor: "#00d"
-        // }
+        style: {
+          backgroundColor: "yellow"
+        }
       },
       {
         id: "n103",
@@ -51,9 +51,9 @@ function _creatNotes() {
             { txt: "Coding power", doneAt: 187111111 }
           ]
         },
-        // style: {
-        //   backgroundColor: "#00d"
-        // }
+        style: {
+          backgroundColor: "#green"
+        }
       },
       {
         id: "n104",
@@ -62,9 +62,9 @@ function _creatNotes() {
         info: {
           txt: "Fullstack Me Baby!"
         },
-        // style: {
-        //   backgroundColor: "#00d"
-        // }
+        style: {
+          backgroundColor: "#00d"
+        }
       },
       {
         id: "n105",
@@ -74,9 +74,9 @@ function _creatNotes() {
           img: "img/cats2.jpg",
           title: "Bobi and Me"
         },
-        // style: {
-        //   backgroundColor: "#00d"
-        // },
+        style: {
+          backgroundColor: "grey"
+        },
       },
       {
         id: "n106",
@@ -89,9 +89,9 @@ function _creatNotes() {
             { txt: "Coding power", doneAt: 187111111 }
           ]
         },
-        // style: {
-        //   backgroundColor: "#00d"
-        // }
+        style: {
+          backgroundColor: "orange"
+        }
       },
       {
         id: "n107",
@@ -100,9 +100,9 @@ function _creatNotes() {
         info: {
           txt: "Have a nice day :-)"
         },
-        // style: {
-        //   backgroundColor: "#00d"
-        // }
+        style: {
+          backgroundColor: "red"
+        }
       },
       {
         id: "n108",
@@ -111,9 +111,9 @@ function _creatNotes() {
         info: {
           url: "https://www.youtube.com/embed/juocv4AtrHo"
         },
-      //   style: {
-      //     backgroundColor: "#00d"
-      //   }
+        style: {
+          backgroundColor: "purple"
+        }
       },
     ];
     utilService.saveToStorage(NOTES_KEY, notes);
