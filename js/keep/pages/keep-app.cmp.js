@@ -19,7 +19,8 @@ export default {
         <button @click=noteYouTube>
         <i class="fa fa-youtube-square" style="font-size:24px"></i>
         </button>
-        <button @click=noteToDo>ToDo</button>  
+        <button @click=noteToDo><i class='fas fa-list' style='font-size:24px'></i>
+</button>  
         </div>
         <note-txt v-if="onAddTxt" @setInput="addNote"/> 
         <note-img v-if="onAddImg" @setInput="addNote"/>

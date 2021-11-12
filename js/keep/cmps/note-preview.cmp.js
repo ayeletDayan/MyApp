@@ -19,12 +19,11 @@ export default {
              </label>         
     </div>
     <div class="edit-btn-container">
-    <button  @click="onPin(note.id)" :style="isPinned"><i >&#10083;</i></button>
-    <button><i class="fa fa-paper-plane"></i></button>
-    <button @click="removeNote(note.id)"><i class="fa fa-trash"></i></button>
-    <button v-if="!isColorOpen" @click="onColor(note.id)" class="clr-img"><i class="material-icons" style= "font-size: 18px;">&#xe3b7;</i></button>
-    <input v-if="isColorOpen" type="color" class="clr-input" @change="setColor(note.id, $event)">
-    <button><i class="material-icons" style= "font-size: 18px;">edit</i></button>
+    <button class="edit-btn"  @click="onPin(note.id)" :style="isPinned"><i >&#10083;</i></button>
+    <button class="edit-btn"><i class="fa fa-paper-plane"></i></button>
+    <button class="edit-btn" @click="removeNote(note.id)"><i class="fa fa-trash"></i></button>
+    <i class='fas fa-palette'><input type="color" id="color-picker-wrapper" @change="setColor(note.id, $event)"/></i>
+    <button class="edit-btn"><i class='fas fa-edit' style='font-size:18px'></i></button>  
     </div>      
     </div>
     `,

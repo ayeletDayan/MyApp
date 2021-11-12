@@ -130,11 +130,11 @@ function addNote(input, type) {
     isPinned: false,    
     info: {
       txt: '',
+      img: '',
+      url: '',
       todos: [
       ],
     },
-    img: '',
-    url: '',
     style: {
       backgroundColor: 'gold'
     }
@@ -146,12 +146,13 @@ function addNote(input, type) {
   
   else if (type === 'img') {
     noteToAdd.type = "note-img"
-    noteToAdd.img = input
+    noteToAdd.info.img = input
   }
 
   else if (type === 'video') {
+    console.log(input)
     noteToAdd.type = "note-video"
-    noteToAdd.url = input
+    noteToAdd.info.url = input
   }
 
   else if (type === 'todo') {
