@@ -38,9 +38,19 @@ font-family: cursive;
     font-size: 18px;
 }
 
+button.edit-btn {
+    margin-top: 5px;
+  }
+  
+.fa-palette{
+    border-radius: 5px;
+    width: 40px;
+    height: 27.33px;
+    padding: 6px;
+}
+
 .edit-btn:hover{
-  background-color:rgba(255, 255, 0, 0.521);
-    
+  background-color:rgba(255, 255, 0, 0.521);    
 }
 
 .add-note button:hover{
@@ -64,3 +74,14 @@ font-family: cursive;
     padding: 8px;
     border-radius: 5px;
 }
+
+.note-preview div a.x{
+    background-color: rgba(137, 43, 226, 0.384);
+    margin-bottom: 3px;
+    font-size: 7px;
+    font-weight: bold;
+}
+
+@media (max-width: 860px){
+div.notes-list{
+justify-content: center;}

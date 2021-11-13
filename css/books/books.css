@@ -58,9 +58,15 @@
     margin-bottom: 10px;
 }
 
-.book-review input{
-width: 40px;
+@media (max-width: 860px)
+{.book-review input{
+width: 30px;
 }
+
+textarea.reader, textarea.review {
+    width: 120px;
+}}
+
 
 .reviews-list{
     list-style: none;
