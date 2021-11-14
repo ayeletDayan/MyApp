@@ -24,13 +24,13 @@ ul.mail-nav {
     gap: 10px;
     padding: 10px;
     border: 1px solid black;
+    text-align: center;
 }
 
-ul.mail-nav li:hover{
+ul.mail-nav li:hover {
     background-color: rgba(212, 133, 30, 0.705);
     padding: 3px;
     border-radius: 5px;
-
 }
 
 ul.mail-list {
@@ -51,7 +51,7 @@ ul.mail-list {
     border: 1px solid black;
     font-size: 12px;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
 .mail-preview {
@@ -127,13 +127,11 @@ button.send-btn {
 }
 
 @media (min-width: 860px) {
-
     .mail-body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    
     ul.mail-nav {
         margin-top: 10px;
         list-style: none;
@@ -143,8 +141,8 @@ button.send-btn {
         width: 10%;
         padding: 10px;
         border: 1px solid black;
+        text-align: left;
     }
-    
     ul.mail-list {
         margin-top: 10px;
         list-style: none;
@@ -156,7 +154,6 @@ button.send-btn {
         border: 1px solid black;
         margin-right: 0;
     }
-    
     .mail-preview-container {
         font-size: 20px;
         padding: 5px;
@@ -167,16 +164,13 @@ button.send-btn {
         justify-content: space-between;
         right: 20px;
     }
-    
     .mail-preview {
         display: flex;
         flex-direction: row;
         gap: 20px;
     }
-    
     .mail-date {
         position: absolute;
         right: 20px;
     }
-    
 }
