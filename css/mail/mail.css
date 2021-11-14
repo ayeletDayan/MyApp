@@ -1,21 +1,213 @@
+.mail-app {
+    background-color: rgb(231, 214, 214);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+.mail-filter {
+    padding: 20px;
+    background-color: rgba(238, 174, 56, 0.671);
+    text-align: center;
+}
+
+.mail-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul.mail-nav {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 10%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+ul.mail-list {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 85%;
+    padding: 10px;
+    border: 1px solid black;
+    margin-right: 0;
+}
+
+.mail-preview-container {
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    right: 20px;
+}
+
+.mail-preview {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.mail-date {
+    position: absolute;
+    right: 20px;
+}
+
+.compose-btn {
+    margin-top: 10px;
+    background-color: rgba(165, 42, 42, 0.527);
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mail-compose {
+    box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.377);
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+}
+
+.mail-compose h4 {
+    text-align: center;
+}
+
+button.send-btn {
+    margin: 0;
+    background-color: rgb(167, 159, 159);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-radius: 5px;     
+}
+
+.to, .subject{
+    width: 50%;
+    height: 20px;
+}
+
+.mail-txt{
+    width: 95%;
+    margin: 10px;
+    height: 200px;    
+}
+
+.open-mail{
+    box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.377);
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+}
+
+.fa.fa-star:hover{
+    color: rgba(165, 42, 42, 0.363);
+}
+
+.star-on{
+    color: orange;
+}
+
+.star-off{
+    color: black;
+}
+
+.fa.fa-trash{
+padding: 3px;
+}
+
+.fa.fa-trash:hover{
+background-color: rgba(165, 42, 42, 0.363);}
 
 
+/* old */
 
+.mail-details {
+    padding: 20px;
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid black;
+    width: 50%;
+    margin: auto;
+}
+.reader {
+    height: 20px;
+}
 
-        /* <i class="fa fa-comment" style="font-size:24px"></i>
-        <i class="fa fa-comment-o" style="font-size:24px"></i>
-        <i class="fa fa-envelope" style="font-size:24px"></i>
-        <i class="fa fa-envelope-o" style="font-size:24px"></i>
-        <i class="fa fa-envelope-open" style="font-size:24px"></i>
-        <i class="fa fa-envelope-open-o" style="font-size:24px"></i>
-        <i class="fa fa-file-photo-o" style="font-size:24px"></i>
-        <i class="fa fa-file-movie-o" style="font-size:24px"></i>
-        <i class="fa fa-paper-plane" style="font-size:24px"></i>
-        <i class="fa fa-paper-plane-o" style="font-size:24px"></i>
-        <i class="fa fa-trash" style="font-size:24px"></i>
-        <span style='font-size:24px;'>&#10083;</span>
-        <i class="fa fa-youtube-play" style="font-size:24px;color:red"></i>
-        <i class="fa fa-youtube-square" style="font-size:24px"></i>
-        <i class="material-icons">&#xe3b7;</i>
-        <i class="material-icons" style="font-size:24px">edit</i>
-        <i class="material-icons" style="font-size:36px">apps</i> */
+.x {
+    font-size: 10px;
+    padding: 3px;
+    box-shadow: 1px 1px 1px rgb(5, 5, 5);
+    background-color: grey;
+    margin: 3px;
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    background-color: rgb(114, 111, 111);
+}
+
+.mail-title {
+    font-variant-caps: all-small-caps;
+    font-size: 20px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.sale {
+    font-weight: bold;
+    background-color: yellow;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.read {
+    box-shadow: 1px 2px 2px 2px black;
+    font-size: 8px;
+}
+
+.shown {
+    display: block;
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.user-msg {
+    background-color: black;
+    width: 20%;
+    margin: auto;
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+    color: yellow;
+}
+
+.checked {
+    color: orange;
+}
+
+header a, .actions a {
+    color: black;
+}
+
+.search-result {
+    padding: 2px;
+    list-style: none;
+}
